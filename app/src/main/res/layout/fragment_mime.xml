@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mine_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:padding="20dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/head_img"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/head_icon"
+            app:riv_oval="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/head_img"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/head_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="开心果"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/head_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="计算机科学与技术1807班"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_forward" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_coourse_bg"
+        style="@style/fragment_mine_content"
+        android:text="更改课程表皮肤" />
+
+    <View style="@style/horizontal_dividing_line" />
+
+    <Button
+        android:id="@+id/btn_settings"
+        style="@style/fragment_mine_content"
+        android:text="软件设置" />
+
+    <View style="@style/horizontal_dividing_line" />
+
+    <Button
+        android:id="@+id/btn_about_us"
+        style="@style/fragment_mine_content"
+        android:text="关于我们" />
+
+    <View style="@style/horizontal_dividing_line" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/logout_btn"
+        android:text="退出登陆"
+        android:textColor="@color/red" />
+
+</LinearLayout>

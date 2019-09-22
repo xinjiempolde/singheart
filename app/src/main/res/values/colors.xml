@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="text_color">#000000</color>
+    <color name="left_view_bg">#80FFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="mine_yellow">#f6df6f</color>
+    <color name="mine_bg">#EEEEEEEE</color>
+    <color name="grey_bg">#EEEEEEEE</color>
+    <color name="week_selected">#B82AA712</color>
+    <color name="bottonnavigation">#00DFFF</color>
+
+    <!-- 第一组课程表背景 -->
+    <color name="first_course_bg1">#99D4EECC</color>
+    <color name="first_course_bg2">#9992B7B5</color>
+    <color name="first_course_bg3">#9989AB90</color>
+    <color name="first_course_bg4">#99395846</color>
+
+    <!-- 第二组课程表背景 -->
+    <color name="second_course_bg1">#999FEEC1</color>
+    <color name="second_course_bg2">#99AFD2AE</color>
+    <color name="second_course_bg3">#99AFC9DB</color>
+    <color name="second_course_bg4">#9979ACDB</color>
+
+    <!-- 第三组课程表背景 -->
+    <color name="third_course_bg1">#99FFE196</color>
+    <color name="third_course_bg2">#99678396</color>
+    <color name="third_course_bg3">#99A0D1A8</color>
+    <color name="third_course_bg4">#99395846</color>
+
+    <!-- 第四组课程表背景 -->
+    <color name="fourth_course_bg1">#9957968A</color>
+    <color name="fourth_course_bg2">#99EFD68B</color>
+    <color name="fourth_course_bg3">#9991D1C3</color>
+    <color name="fourth_course_bg4">#9960A374</color>
+
+    <!-- 第五组课程表背景 -->
+    <color name="fifth_course_bg1">#99648F7D</color>
+    <color name="fifth_course_bg2">#99E9E8CF</color>
+    <color name="fifth_course_bg3">#9996D1EA</color>
+    <color name="fifth_course_bg4">#998CCCB7</color>
+</resources>

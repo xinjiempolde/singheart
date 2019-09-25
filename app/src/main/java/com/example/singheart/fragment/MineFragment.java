@@ -170,7 +170,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
                 check_version();
                 break;
             case R.id.btn_about_us:
-                Toast.makeText(getActivity(), "正在开发", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "东大开心果", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.user_info:
                 startActivity(new Intent(getActivity(), InfoActivity.class));

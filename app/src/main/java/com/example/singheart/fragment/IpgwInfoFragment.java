@@ -56,7 +56,7 @@ public class IpgwInfoFragment extends Fragment implements View.OnClickListener {
         net_info.setAdapter(adapter);
         RefreshLayout refreshLayout = (RefreshLayout) rootView.findViewById(R.id.refreshLayout);
         refreshLayout.setRefreshHeader(new PhoenixHeader(mContext));
-//设置 Footer 为 球脉冲 样式
+        //设置 Footer 为 球脉冲 样式
         refreshLayout.setRefreshFooter(new BallPulseFooter(mContext).setSpinnerStyle(SpinnerStyle.Scale));
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override

@@ -28,6 +28,10 @@ import com.example.singheart.activity.MainActivity;
 import com.example.singheart.adapter.WeekAdapter;
 import com.example.singheart.entity.Course;
 import com.example.singheart.entity.Week;
+import com.scwang.smartrefresh.header.DeliveryHeader;
+import com.scwang.smartrefresh.header.FlyRefreshHeader;
+import com.scwang.smartrefresh.header.WaterDropHeader;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -68,6 +72,8 @@ public class CourseFragment extends Fragment implements AdapterView.OnItemSelect
     public void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
         rootView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_course, null, false);
+        RefreshLayout refreshLayout = (RefreshLayout) rootView.findViewById(R.id.course_refresh);
+        refreshLayout.setRefreshHeader(new DeliveryHeader(getActivity()));
         SelectRes();
         String strJson = null;
         try {
@@ -195,7 +201,7 @@ public class CourseFragment extends Fragment implements AdapterView.OnItemSelect
         }
     }
 
-
+    /* 修改课程表皮肤为用户设置内容 */
     public void SelectRes() {
         Bundle bundle = getArguments();
         resIdFlag = bundle.getInt("resIdFlag",3);

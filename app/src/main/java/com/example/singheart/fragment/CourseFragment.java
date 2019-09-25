@@ -160,7 +160,7 @@ public class CourseFragment extends Fragment implements AdapterView.OnItemSelect
         mWeeks = new ArrayList<Week>();
         mWeeks.add(new Week("快乐假期"));
         for (int i = 0; i < 24; i++) {
-            mWeeks.add(new Week("第" + String.valueOf(i + 1) + "周"));
+            mWeeks.add(new Week("第" + String.valueOf(i) + "周"));
         }
         mWeekAdapter = new WeekAdapter(mWeeks, getActivity());
         mSpinner.setAdapter(mWeekAdapter);
@@ -168,7 +168,7 @@ public class CourseFragment extends Fragment implements AdapterView.OnItemSelect
         if (WhichWeek == -1) {
             mSpinner.setSelection(0);
         } else {
-            mSpinner.setSelection(WhichWeek + 1);
+            mSpinner.setSelection(WhichWeek + 2);
         }
     }
 

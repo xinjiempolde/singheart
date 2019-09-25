@@ -68,7 +68,7 @@
     <Button
         android:id="@+id/btn_settings"
         style="@style/fragment_mine_content"
-        android:text="软件设置" />
+        android:text="检查更新" />
 
     <View style="@style/horizontal_dividing_line" />
 

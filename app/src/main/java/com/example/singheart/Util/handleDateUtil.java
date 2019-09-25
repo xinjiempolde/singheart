@@ -21,13 +21,12 @@ import java.util.logging.Handler;
 //数据处理类，含有大量处理数据的函数
 public class handleDateUtil {
     public static void handleCourseDate(String source, Context context) {
-        ArrayList<String> course_date = RegexUtil.getComplexResulte("(?s)(?<=var teachers).*?(?=var teachers)", source);
+        ArrayList<String> course_date = RegexUtil.getComplexResulte("(?s)(?<=var teachers).*?(?=var teachers)|(?<=var teachers).*?(?=table0\\.marshalTable)", source);
         JSONArray jsonArray = new JSONArray();
-        Log.e("size", String.valueOf(course_date.size()));
         for (int i = 0; i < course_date.size(); i++) {
             String eachCourse = course_date.get(i);
             String name = RegexUtil.getUniqueResulte("(?<=,\")[^\\d]*?(?=\\(A)", eachCourse, 0);
-            String room = RegexUtil.getUniqueResulte("(?<=\\\")[\\u4e00-\\u9fa50-9A-Z()（）]{1,}(?=\\(浑南校区)|(?<=\\\")[\\u4e00-\\u9fa50-9A-Z()（）]{1,}(?=\\(南湖校区)", eachCourse, 0);
+            String room = RegexUtil.getUniqueResulte("(?<=\\\")[\\u4e00-\\u9fa50-9A-Z()（）-]{1,}(?=\\(浑南校区)|(?<=\\\")[\\u4e00-\\u9fa50-9A-Z()（）]{1,}(?=\\(南湖校区)", eachCourse, 0);
             String week = RegexUtil.getUniqueResulte("(?<=\\\")[\\d]{40,}(?=\\\")", eachCourse, 0);
             String col = RegexUtil.getUniqueResulte("(?<=\\=)[0-7]{1}(?=\\*unitCount\\+)", eachCourse, 0);
             String row = RegexUtil.getUniqueResulte("(?<=\\+)[\\d]{1,}(?=;)", eachCourse, 0);

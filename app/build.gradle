@@ -6,7 +6,7 @@ android {
         applicationId "com.example.singheart"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 1
+        versionCode 2
         versionName "1.1.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }

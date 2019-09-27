@@ -340,16 +340,28 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     //从教务处获取课表
-    private void get_course_from_aao(){
+    private void get_course_from_aao() throws IOException {
+        final String myCookie = "JSESSIONID=" + JSESSIONID + "; " + "SERVERNAME=" + SERVERNAME + "; " + "GSESSIONID=" + GSESSIONID;
+        Request ids_request = new Request.Builder()
+                .url("http://219.216.96.4/eams/courseTableForStd.action")
+                .addHeader("User-Agent",userAgent)
+                .addHeader("Cookie",myCookie)
+                .get()
+                .build();
+        OkHttpClient ids_client = new OkHttpClient();
+        Call ids_call = ids_client.newCall(ids_request);
+        Response ids_reponse = ids_call.execute();
+        String ids_page = ids_reponse.body().string();
+        ArrayList<String> ids_list = RegexUtil.getComplexResulte("(?<=\"ids\",\").*?(?=\")",ids_page);
+        String ids = ids_list.get(0);
         RequestBody course_date = new FormBody.Builder()
                 .add("ignoreHead","1")
                 .add("showPrintAndExport","1")
                 .add("setting.kind","std")
                 .add("startWeek","")
                 .add("semester.id","12")
-                .add("ids","48340")
+                .add("ids",ids)
                 .build();
-        final String myCookie = "JSESSIONID=" + JSESSIONID + "; " + "SERVERNAME=" + SERVERNAME + "; " + "GSESSIONID=" + GSESSIONID;
         Request course_request = new Request.Builder()
                 .url("http://219.216.96.4/eams/courseTableForStd!courseTable.action")
                 .addHeader("User-Agent",userAgent)

@@ -8,4 +8,4 @@
 首次使用请使用校园网或者[校内VPN](http://www.neu.edu.cn/vpn.neu.edu.cn/student_vpn_download.htm)，输入校园卡账户和密码便可进行登录，
 此后便可离线使用
 #### 应用截图
-![login](https://i.postimg.cc/LXZjdPcP/login.jpg)
+![login](https://i.postimg.cc/LXZjdPcP/login.jpg)![course](https://i.postimg.cc/sf5mLF92/course.jpg)

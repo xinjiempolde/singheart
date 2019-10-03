@@ -243,10 +243,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                                 }
                             }
                         }.start();
-/*                        if (JSESSIONID.equals("") || GSESSIONID.equals("")){
-                            mHandler.sendEmptyMessage(0x005);
-                            return;
-                        }*/
                     }
                 });
             }

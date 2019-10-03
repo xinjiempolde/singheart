@@ -8,4 +8,8 @@
 首次使用请使用校园网或者[校内VPN](http://www.neu.edu.cn/vpn.neu.edu.cn/student_vpn_download.htm)，输入校园卡账户和密码便可进行登录，
 此后便可离线使用
 #### 应用截图
-![login](https://i.postimg.cc/LXZjdPcP/login.jpg)![course](https://i.postimg.cc/sf5mLF92/course.jpg)
+![login](https://i.postimg.cc/LXZjdPcP/login.jpg)  ![course](https://i.postimg.cc/sf5mLF92/course.jpg)
+
+## 实现方法简介
+用OkHttp模拟登录教务处获取源码，利用正则表达式获取课表信息，并保存为json格式
+在课表界面再读取json输出
